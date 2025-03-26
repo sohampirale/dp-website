@@ -3,7 +3,7 @@ import React from "react";
 
 const ChatBotPopoverComponent = () => {
   return (
-    <div className="fixed bottom-8 left-8 z-50" id="el-su3ibn8g">
+    <div className="fixed bottom-8 right-8 z-50" id="el-su3ibn8g">
       <button
         id="chatbot-trigger"
         className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300"

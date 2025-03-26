@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </ul>
         <a 
           href={ctaLink}
-          className={`block w-full bg-${accentColor}-600 hover:bg-${accentColor}-700 text-white text-center py-3 px-4 rounded-lg transition duration-300`}
+          className={`block w-full bg-${accentColor}-600  hover:bg-${accentColor}-700 text-white text-center py-3 px-4 rounded-lg transition duration-300`}
         >
           Request Quote
         </a>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Sora, DM_Sans } from "next/font/google";
 import "./globals.css";
+import ChatBotPopoverComponent from "./components/chatbot-popover";
+import WhatsAppPopoverComponent from "./components/whatsapp-popover";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -28,6 +30,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sora.variable} ${dmSans.variable} antialiased`}>
         {children}
+        <ChatBotPopoverComponent />
+        <WhatsAppPopoverComponent />
       </body>
     </html>
   );
