@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
                   company={testimonial.company}
                   quote={testimonial.quote}
                   result={testimonial.result}
-                  imageText={testimonial.name.charAt(0)}
+                  // imageText={testimonial.name.charAt(0)}
                 />
               </div>
             ))}
