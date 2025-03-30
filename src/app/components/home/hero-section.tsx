@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 
-interface Props {}
+// interface Props {}
 
 const HeroSection = () => {
   return (
@@ -78,14 +79,13 @@ const HeroSection = () => {
           {/* <!-- Mascot/Image Content --> */}
           <div className="w-full md:w-1/2 relative z-10" id="el-h5tp8he1">
             <div className="relative" id="el-dgj9049w">
-              <img
-                src="https://placehold.co/600x600?text=Digital Growth Mascot Character"
-                alt="Digital Growth Mascot Character"
-                className="mx-auto max-w-full rounded-lg shadow-2xl border-4 border-white/20"
-                width="600"
-                height="600"
-                id="el-eix3th3y"
-              />{" "}
+            <Image
+              src="https://placehold.co/600x600?text=Digital Growth Mascot Character"
+              alt="Digital Growth Mascot Character"
+              width={600}
+              height={600}
+              className="mx-auto max-w-full rounded-lg shadow-2xl border-4 border-white/20"
+            />{" "}
               <div
                 className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-full shadow-lg"
                 id="el-pszug96d"

@@ -3,7 +3,7 @@ import { ClientLogo } from "./client-logo";
 import StatisticCard from "./client/metrices";
 import SuccessStoryCard from "./client/success-story";
 
-interface Props {}
+// interface Props {}
 
 const OurClientComponents = () => {
   const clientLogos = [
@@ -231,7 +231,7 @@ const OurClientComponents = () => {
             Ready to Join Our Success Stories?
           </h3>
           <p className="text-gray-600 mb-8 max-w-3xl mx-auto" id="el-ucut4z9b">
-            Let's discuss how our digital marketing solutions can help your
+            Let&apos;s discuss how our digital marketing solutions can help your
             business achieve remarkable growth.
           </p>
           <a

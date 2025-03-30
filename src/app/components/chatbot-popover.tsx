@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 
 const ChatBotPopoverComponent = () => {
   return (
@@ -9,12 +9,12 @@ const ChatBotPopoverComponent = () => {
         className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300"
       >
         <div className="relative" id="el-vl4agta4">
-          <img
+          <Image
             src="https://placehold.co/40x40?text=AI"
             alt="AI Assistant"
+            width={40}
+            height={40}
             className="w-6 h-6 rounded-full"
-            width="40"
-            height="40"
             id="el-syk23zmc"
           />
           <span

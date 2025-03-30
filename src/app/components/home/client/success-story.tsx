@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 export interface Tag {
   label: string;
   color: string;
@@ -21,16 +23,19 @@ const SuccessStoryCard: React.FC<SuccessStoryCardProps> = ({
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
       <div className="p-6">
         <div className="flex items-center mb-4">
-          <img
+          <div className="w-12 h-12 relative mr-4">
+          <Image
             src={logo || `https://placehold.co/80x80?text=${companyName}`}
             alt={`${companyName} Company Logo`}
-            className="w-12 h-12 rounded object-cover mr-4"
-            width="80"
-            height="80"
+            width={48}   // Explicit width
+            height={48}  // Explicit height
+            className="rounded object-cover"
           />
+
+          </div>
           <h4 className="text-lg font-bold text-gray-900">{companyName}</h4>
         </div>
-        <p className="text-gray-700 mb-4">"{testimonial}"</p>
+        <p className="text-gray-700 mb-4">&quot;{testimonial}&quot;</p>
         <div className="flex items-center">
           {tags.map((tag, index) => (
             <div

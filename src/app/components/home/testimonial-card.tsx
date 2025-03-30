@@ -1,24 +1,24 @@
 import React from 'react';
+import Image from "next/image";
 
-const TestimonialCard = ({ name, position, company, quote, result, imageText }: {
+const TestimonialCard = ({ name, position, company, quote, result }: {
   name: string;
   position: string;
   company: string;
   quote: string;
   result: string;
-  imageText: string;
 }) => {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
       <div className="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col">
         <div className="flex items-center mb-6">
           <div className="mr-4">
-            <img 
+            <Image 
               src={`https://placehold.co/80x80?text=${encodeURIComponent(name)}`}
               alt={`${name} - ${position}`} 
+              width={80} 
+              height={80} 
               className="w-16 h-16 rounded-full object-cover"
-              width="80" 
-              height="80"
             />
           </div>
           <div>
@@ -41,13 +41,12 @@ const TestimonialCard = ({ name, position, company, quote, result, imageText }: 
             ))}
           </div>
           <p className="text-gray-700 italic">
-            "{quote}"
+             &quot;{quote}&quot;
           </p>
         </div>
-        <div className="flex items-center">
-          <span className="text-blue-600 font-medium">Result:</span>
-          <span className="ml-2 text-gray-700">{result}</span>
-        </div>
+        <p className="text-blue-600 font-medium">
+          Result: <span className="text-gray-700">{result}</span>
+        </p>
       </div>
     </div>
   );
