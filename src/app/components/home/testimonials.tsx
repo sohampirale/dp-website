@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import TestimonialCard from './testimonial-card';
 
@@ -58,15 +58,14 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="relative testimonial-carousel">
-          <div className="overflow-hidden">
-            <div 
-              className="testimonial-slider flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard 
-                  key={index}
+        <div className="relative w-full max-w-3xl mx-auto overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${activeSlide * 100}%)`, width: `${testimonials.length * 100}%` }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="w-full flex-shrink-0">
+                <TestimonialCard
                   name={testimonial.name}
                   position={testimonial.position}
                   company={testimonial.company}
@@ -74,45 +73,43 @@ const TestimonialsSection = () => {
                   result={testimonial.result}
                   imageText={testimonial.name.charAt(0)}
                 />
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Carousel Controls */}
+        {/* Carousel Controls */}
+        <div className="flex justify-between items-center mt-6">
           <button
             onClick={handlePrevSlide}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg -ml-4 z-10 carousel-prev focus:outline-none"
+            className="p-3 bg-white rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
           >
             <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`h-3 w-12 rounded-full ${index === activeSlide ? 'bg-blue-600' : 'bg-gray-300'}`}
+                onClick={() => setActiveSlide(index)}
+              />
+            ))}
+          </div>
           <button
             onClick={handleNextSlide}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg -mr-4 z-10 carousel-next focus:outline-none"
+            className="p-3 bg-white rounded-full shadow-md hover:bg-gray-200 focus:outline-none"
           >
             <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
-          {/* Carousel Indicators */}
-          <div className="flex justify-center mt-8 carousel-indicators">
-            {testimonials.map((_, index) => (
-              <button 
-                key={index}
-                className={`h-3 w-12 mx-1 rounded-full ${
-                  index === activeSlide ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
-                onClick={() => setActiveSlide(index)}
-              />
-            ))}
-          </div>
         </div>
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a 
+          <a
             href="#contact"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300"
           >
