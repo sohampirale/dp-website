@@ -5,10 +5,12 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
+    <>
     <section
       id="hero"
-      className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24 overflow-hidden relative"
+      className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24 overflow-hidden"
     >
+
       <div className="container mx-auto px-4" id="el-abbeoq2o">
         <div
           className="flex flex-col md:flex-row items-center"
@@ -33,17 +35,14 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4" id="el-zz97in0i">
               <a
                 href="#"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-8 py-3 rounded-full transition duration-300 text-center"
-                id="el-j40btzo6"
-                target="_self"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-lg px-10 py-4 rounded-full transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 Explore Services
               </a>
+
               <a
                 href="#"
-                className="bg-transparent hover:bg-white hover:text-blue-600 text-white font-medium px-8 py-3 rounded-full border-2 border-white transition duration-300 text-center"
-                id="el-xfisjepn"
-                target="_self"
+                className="bg-white/20 hover:bg-white/30 text-white font-medium text-lg px-10 py-4 rounded-full border-2 border-white transition duration-300 transform hover:scale-105 shadow-md"
               >
                 Contact Us
               </a>
@@ -80,24 +79,25 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative z-10" id="el-h5tp8he1">
             <div className="relative" id="el-dgj9049w">
             <Image
-              src="https://placehold.co/600x600?text=Digital Growth Mascot Character"
-              alt="Digital Growth Mascot Character"
+              src="/path-to-your-image.png" // Update with your actual image
+              alt="Hero Mascot"
               width={600}
               height={600}
               className="mx-auto max-w-full rounded-lg shadow-2xl border-4 border-white/20"
-            />{" "}
+            />
+                      
               <div
-                className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-full shadow-lg flex flex-col items-center justify-center"
-                id="el-pszug96d"
-                style={{ width: "80px", height: "80px" }}
-              >
-                <span className="text-2xl font-bold leading-none" id="el-w7lmv3bv">
-                  100%
-                </span>
-                <span className="text-xs block" id="el-tl8ne4vl">
-                  Success
-                </span>
-              </div>
+              className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-full shadow-lg flex flex-col items-center justify-center rotate-6 
+              transition-transform duration-300 ease-in-out transform hover:scale-110 animate-float"
+              style={{ width: "80px", height: "80px", boxShadow: "0 0 12px rgba(255, 165, 0, 0.7)" }} // Soft Glow
+            >
+              <span className="text-2xl font-extrabold leading-none drop-shadow-md">
+                100%
+              </span>
+              <span className="text-xs block opacity-90 tracking-wide">
+                Success
+              </span>
+            </div>
             </div>
           </div>
         </div>
@@ -105,9 +105,9 @@ const HeroSection = () => {
 
       {/* <!-- Background Elements --> */}
       <div
-        className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-20"
-        id="el-yen6433u"
+        className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-white/5 to-transparent"
       ></div>
+
       <div
         className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 rounded-full filter blur-3xl opacity-20"
         id="el-8fqolyk8"
@@ -115,30 +115,46 @@ const HeroSection = () => {
 
       {/* <!-- Scroll Indicator --> */}
       <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        id="el-984h6qlr"
-      >
-        <span className="text-sm mb-2" id="el-zkycpo0j">
-          Scroll to explore
-        </span>
-        <svg
-          className="animate-bounce w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          id="el-e0r1s7rc"
+          className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            id="el-aqp9m8o3"
-          ></path>
-        </svg>
-      </div>
+          <span className="text-sm mb-2 text-white drop-shadow-md">
+            Scroll to explore
+          </span>
+          <svg
+            className="animate-bounce w-6 h-6 text-white drop-shadow-md"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
+        </div>
+      <div
+  className="absolute top-20 right-20 w-3 h-3 bg-white rounded-full animate-pulse opacity-60"
+></div>
+<div
+  className="absolute bottom-16 left-16 w-4 h-4 bg-white rounded-full animate-pulse opacity-40"
+></div>
+
     </section>
+    <svg
+    className="absolute bottom-0 left-0 w-full text-white"
+    viewBox="0 0 1440 320"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillOpacity="1"
+      d="M0,160L48,165.3C96,171,192,181,288,181.3C384,181,480,171,576,176C672,181,768,203,864,186.7C960,171,1056,117,1152,122.7C1248,128,1344,192,1392,224L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    ></path>
+  </svg>
+</>  
   );
 };
 
