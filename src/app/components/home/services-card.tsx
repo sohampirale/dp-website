@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   ctaLink = '#contact'
 }) => {
   return (
-    <div className={`bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl`}>
+    <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300">
       <div className="p-6">
         <div className={`bg-${accentColor}-100 p-3 inline-block rounded-full mb-6`}>
           {icon}

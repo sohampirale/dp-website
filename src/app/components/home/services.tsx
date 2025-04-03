@@ -64,28 +64,25 @@ const ServicesSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Core Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 border-b-2 border-blue-600 inline-block pb-2">
+          Our Core Services
+        </h2>         
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive digital solutions designed to boost your brand&apos;s visibility and drive sustainable growth.
           </p>
+
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {servicesData.map((service, index) => (
-            <ServiceCard 
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              services={service.services}
-              accentColor={service.accentColor}
-            />
+            <ServiceCard key={index} {...service} />
           ))}
         </div>
 
+
         {/* CTA Banner */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 shadow-xl">
+        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 shadow-2xl">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -97,12 +94,13 @@ const ServicesSection: React.FC = () => {
             </div>
             <a 
               href="#contact"
-              className="bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-8 rounded-full transition duration-300 text-center whitespace-nowrap"
+              className="bg-white hover:bg-gray-100 text-blue-700 font-bold py-3 px-10 rounded-full transition duration-300 text-center whitespace-nowrap transform hover:scale-105 shadow-lg"
             >
               Get Started Today
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );
