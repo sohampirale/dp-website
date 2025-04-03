@@ -87,13 +87,14 @@ const HeroSection = () => {
               className="mx-auto max-w-full rounded-lg shadow-2xl border-4 border-white/20"
             />{" "}
               <div
-                className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-full shadow-lg"
+                className="absolute -top-4 -right-4 bg-orange-500 text-white p-4 rounded-full shadow-lg flex flex-col items-center justify-center"
                 id="el-pszug96d"
+                style={{ width: "80px", height: "80px" }}
               >
-                <span className="text-xl font-bold" id="el-w7lmv3bv">
+                <span className="text-2xl font-bold leading-none" id="el-w7lmv3bv">
                   100%
                 </span>
-                <span className="text-sm block" id="el-tl8ne4vl">
+                <span className="text-xs block" id="el-tl8ne4vl">
                   Success
                 </span>
               </div>
